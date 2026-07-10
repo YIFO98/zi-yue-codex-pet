@@ -1,0 +1,21 @@
+{
+  "packageName": "zi-yue-v2-win-mac",
+  "release": "v2.0.0",
+  "petId": "zi-yue",
+  "displayName": "紫月",
+  "spriteVersionNumber": 2,
+  "platforms": [
+    "Windows",
+    "macOS"
+  ],
+  "repository": "https://github.com/Yifo98/zi-yue-codex-pet",
+  "latestRelease": "https://github.com/Yifo98/zi-yue-codex-pet/releases/latest",
+  "releaseAsset": "https://github.com/Yifo98/zi-yue-codex-pet/releases/download/v2.0.0/zi-yue-v2-win-mac.zip",
+  "installRoot": "${CODEX_HOME:-$HOME/.codex}/pets/zi-yue",
+  "payloadSha256": {
+    "pet.json": "23486333eef37b15500ecba695b553349bc503cb30d1a4055c3d56cff1b95770",
+    "spritesheet.webp": "78f8a8fb0a3e3f464bd485079cb123f574c3c63dc0754d8fd11143c58816ba15"
+  },
+  "releaseAssetSha256": "12bae32d70d9d9bc9c0faae4927ade537d1dbb5acb73e3db26f8704a7e5c1f66"
+}
+

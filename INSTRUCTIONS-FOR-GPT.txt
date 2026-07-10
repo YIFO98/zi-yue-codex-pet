@@ -1,0 +1,15 @@
+Install and verify the Zi Yue v2 Codex pet with real command output.
+
+1. Extract the entire ZIP to a normal folder. Do not run from an archive preview.
+2. Detect the operating system.
+3. On Windows, run:
+   powershell -NoProfile -ExecutionPolicy Bypass -File ".\install-zi-yue-windows.ps1"
+   powershell -NoProfile -ExecutionPolicy Bypass -File ".\verify-zi-yue-windows.ps1"
+4. On macOS, run:
+   /bin/bash "./install-zi-yue-macos.sh"
+   /bin/bash "./verify-zi-yue-macos.sh"
+5. Report the resolved install path, both payload SHA256 values, and the final [PASS] line.
+6. Tell the user to fully quit and reopen the Codex/ChatGPT desktop app.
+
+Do not edit the pet artwork. Do not use APPDATA, LOCALAPPDATA, or sudo. Do not skip the verification script.
+
