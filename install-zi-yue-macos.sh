@@ -3,7 +3,7 @@
 set -euo pipefail
 
 EXPECTED_MANIFEST_HASH="23486333eef37b15500ecba695b553349bc503cb30d1a4055c3d56cff1b95770"
-EXPECTED_SPRITE_HASH="78f8a8fb0a3e3f464bd485079cb123f574c3c63dc0754d8fd11143c58816ba15"
+EXPECTED_SPRITE_HASH="4bc5889172bd73dd2b8ca074ad05735f70d0d5733e360deba2ac5ebea9e8fb8f"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 SOURCE_PET_DIR="$SCRIPT_DIR/pet/zi-yue"
@@ -71,4 +71,3 @@ assert_hash "$target_pet_dir/spritesheet.webp" "$EXPECTED_SPRITE_HASH"
 
 echo "[PASS] Zi Yue v2 installed correctly at: $target_pet_dir"
 echo "[NEXT] Fully quit and reopen the Codex/ChatGPT desktop app."
-
