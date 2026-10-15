@@ -1,15 +1,11 @@
-Install and verify the Zi Yue v2 Codex pet with real command output.
+Install and verify the Yue Li R4 pet only when the user requests installation.
 
-1. Extract the entire ZIP to a normal folder. Do not run from an archive preview.
-2. Detect the operating system.
-3. On Windows, run:
-   powershell -NoProfile -ExecutionPolicy Bypass -File ".\install-zi-yue-windows.ps1"
-   powershell -NoProfile -ExecutionPolicy Bypass -File ".\verify-zi-yue-windows.ps1"
-4. On macOS, run:
-   /bin/bash "./install-zi-yue-macos.sh"
-   /bin/bash "./verify-zi-yue-macos.sh"
-5. Report the resolved install path, both payload SHA256 values, and the final [PASS] line.
-6. Tell the user to fully quit and reopen the Codex/ChatGPT desktop app.
+1. Extract the entire package and read docs/INSTALL.md.
+2. Detect the operating system and the existing CODEX_HOME setting.
+3. On macOS, run /bin/bash ./install-yue-li-macos.sh and then /bin/bash ./verify-yue-li-macos.sh.
+4. On Windows, run powershell -NoProfile -File .\install-yue-li-windows.ps1 and then powershell -NoProfile -File .\verify-yue-li-windows.ps1.
+5. If a system policy blocks execution, use the documented manual installation instead of weakening that policy.
+6. Report the destination, both payload SHA256 values and the actual verification result. Do not claim UI acceptance from file verification.
+7. Ask the user to reopen their client and select Yue Li / 月璃 if needed. Preserve any existing Zi Yue installation.
 
-Do not edit the pet artwork. Do not use APPDATA, LOCALAPPDATA, or sudo. Do not skip the verification script.
-
+Do not edit the artwork, use administrator privileges, alter account Pets, or skip verification.

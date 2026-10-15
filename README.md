@@ -1,92 +1,71 @@
-# 紫月 · Zi Yue v2
+# 月璃 · Yue Li
 
-使用 GPT-5.6 Sol 重新打磨的 Codex 桌面宠物，保留紫月原本的角色设计，升级跑动脚步、悬停回应和 16 方向注视。
+月冠、紫眸、淡紫汉服的小仙子：御剑随行，静坐陪伴，戴耳机工作，捧莲检查成果，捧星庆祝。
 
-A GPT-5.6 Sol remaster of the Zi Yue Codex desktop pet—same character design, with more natural running footwork, a gentler hover response, and 16 pointer-gaze directions.
+A moon-crowned companion with sword flight, a calm seated idle, headphone typing, lotus inspection and a star celebration.
 
-![Zi Yue v2 animated preview](preview/zi-yue-gpt56-sol-promo.gif)
+![专注工作与检查成果的原速对照](preview/yue-li/work-vs-review.gif)
 
-> 这是独立制作的自定义宠物项目，并非 OpenAI 官方宠物包。<br>
-> This is an independent custom-pet project, not an official OpenAI pet release.
+这是独立制作的自定义宠物项目，并非 OpenAI 官方宠物包。仓库沿用 `zi-yue-codex-pet` 地址，当前主版本为月璃 R4。
 
-## 下载 · Download
+## 下载与预览
 
-前往 [GitHub Releases](https://github.com/Yifo98/zi-yue-codex-pet/releases/latest)，在 **Assets** 中下载：
+- **[下载月璃 R4 安装包（Windows / macOS）](https://github.com/YIFO98/zi-yue-codex-pet/raw/refs/heads/main/packages/yue-li-r4-win-mac.zip)**
+- [完整动作 GIF](preview/yue-li/yueli-all-states.gif) · [完整动作 MP4](preview/yue-li/yueli-all-states.mp4)
+- [交互预览源码](preview/yue-li/index.html)：下载仓库后用浏览器打开，可切换动作、逐帧查看及跟随指针。
+- [图集 WebP](pet/yue-li/spritesheet.webp) · [安装说明](docs/INSTALL.md)
 
-[`zi-yue-v2-win-mac.zip`](https://github.com/Yifo98/zi-yue-codex-pet/releases/download/v2.0.0/zi-yue-v2-win-mac.zip)
+Download and extract the entire package, then run the installer for your OS. The current package is stored in this repository; the older GitHub Release `v2.0.0` contains Zi Yue, not Yue Li.
 
-请不要下载 GitHub 自动生成的 `Source code (zip)`；它不是安装包。
+## 安装
 
-Go to [GitHub Releases](https://github.com/Yifo98/zi-yue-codex-pet/releases/latest) and download `zi-yue-v2-win-mac.zip` under **Assets**. Do not use GitHub's auto-generated `Source code` archives.
+先解压完整安装包，在解压后的目录运行。安装器会校验素材、备份已有同名月璃，再复制并复验，无需管理员权限。
 
-## 快速安装 · Quick install
-
-Codex 不会直接读取 ZIP。先完全退出 Codex/ChatGPT 桌面客户端，再解压安装包并运行对应脚本。
-
-The app does not load the ZIP directly. Fully quit the Codex/ChatGPT desktop app, extract the package, and run the installer for your operating system.
-
-### Windows
-
-在解压目录打开 PowerShell：
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\install-zi-yue-windows.ps1"
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\verify-zi-yue-windows.ps1"
-```
-
-### macOS
-
-在解压目录打开 Terminal：
+macOS：
 
 ```bash
-/bin/bash "./install-zi-yue-macos.sh"
-/bin/bash "./verify-zi-yue-macos.sh"
+/bin/bash ./install-yue-li-macos.sh
+/bin/bash ./verify-yue-li-macos.sh
 ```
 
-看到 `[PASS]` 后，完全退出并重新打开 Codex/ChatGPT。安装器不需要管理员权限。
+Windows PowerShell：
 
-After `[PASS]`, fully quit and reopen the Codex/ChatGPT desktop app. No administrator access is required.
-
-完整安装、手动安装与 Gatekeeper 说明见 [安装文档](docs/INSTALL.md)。
-
-See [Installation Guide](docs/INSTALL.md) for complete, manual, and Gatekeeper instructions.
-
-## Codex 读取位置 · Install location
-
-- 设置了 `CODEX_HOME`：`$CODEX_HOME/pets/zi-yue`
-- 未设置：`$HOME/.codex/pets/zi-yue`
-- Windows 默认等价于 `%USERPROFILE%\.codex\pets\zi-yue`
-
-安装器会先校验包内文件，备份已有紫月，再复制并复验。
-
-## 动作升级 · Motion remaster
-
-- 更自然的左右跑动脚步，脚、衣摆和长发有清晰节奏
-- 五帧温柔悬停回应，不再用突兀的跳跃表现
-- 保留等待、发呆与回看动作
-- 16 个顺时针鼠标注视方向
-- Windows 与 macOS 使用同一份 v2 图集
-
-## 当前客户端限制 · Runtime limits
-
-- 悬停状态固定调用 Row 4，宠物包不能随机选择 Row 0–10。
-- 上下拖动没有独立移动状态；斜向拖动只按水平分量显示左跑或右跑。
-- 16 个方向是看向鼠标的注视姿态，不是 16 方向移动。
-
-These are current client-runtime limits; adding true vertical or diagonal locomotion requires new app states and a new atlas contract.
-
-## 完整性 · Integrity
-
-Release ZIP SHA256：
-
-```text
-12bae32d70d9d9bc9c0faae4927ade537d1dbb5acb73e3db26f8704a7e5c1f66  zi-yue-v2-win-mac.zip
+```powershell
+powershell -NoProfile -File .\install-yue-li-windows.ps1
+powershell -NoProfile -File .\verify-yue-li-windows.ps1
 ```
 
-包内安装器会再次校验 `pet.json` 和 `spritesheet.webp`。如果交给另一台电脑上的 GPT 安装，可以直接把 ZIP 和包内的 `INSTRUCTIONS-FOR-GPT.txt` 一起交给它。
+如果 Windows 脚本策略阻止执行，按[手动安装说明](docs/INSTALL.md#手动安装)复制文件。看到 `[PASS]` 后，完全退出并重开客户端，在宠物选择器中选择「月璃」。
 
-## Project links
+安装位置为 `$CODEX_HOME/pets/yue-li`；未设置 `CODEX_HOME` 时使用 `$HOME/.codex/pets/yue-li`。新包使用独立的 `yue-li` 标识，保留原有的 `zi-yue` 文件。
 
-- Repository: <https://github.com/Yifo98/zi-yue-codex-pet>
-- Latest release: <https://github.com/Yifo98/zi-yue-codex-pet/releases/latest>
-- GPT-5.6 Sol preview: <https://openai.com/index/previewing-gpt-5-6-sol/>
+## 动作
+
+| 状态 | 月璃的表现 |
+| --- | --- |
+| 待机 | 坐姿、呼吸和轻柔眨眼 |
+| 向右 / 向左移动 | 踏剑飞行 |
+| 招手 | 轻轻挥手 |
+| 跳跃 / 庆祝 | 捧星跃起并落回原位 |
+| 失败 | 失落、垂眸 |
+| 等待 | 等待回应 |
+| 专注工作 | 戴金色蓝花耳机，在紫色笔记本前打字 |
+| 检查成果 | 双手捧蓝莲，侧头端详、眨眼点头 |
+| 视线 | 十六个顺时针方向 |
+
+图集为 v2：`1536 × 2288`、`8 × 11` 格、每格 `192 × 208`，共 73 个有效帧。WebP 为无损编码，与通过 Pets 校验的 PNG 逐像素一致。
+
+预览默认按 Pets 帧时长播放。0.65 / 0.5 倍选项仅影响预览，不会修改客户端的播放速度；十六个视线方向也不代表十六种移动方向。
+
+## 校验与目录
+
+安装器内置两个素材文件的 SHA256，包内 `SHA256SUMS.txt` 提供完整校验清单。制作与校验说明见 [R4 更新记录](docs/YUE-LI-R4.md)。
+
+- `pet/yue-li/`：当前月璃素材与清单。
+- `preview/yue-li/`：当前动画与本地交互预览。
+- `packages/`：可直接下载的安装包。
+- `install-yue-li-*`、`verify-yue-li-*`：安装与验证脚本。
+- `docs/`：安装、版本和验证说明。
+- `pet/zi-yue/`、旧安装器与旧预览：保留的紫月 v2 文件。
+
+旧版紫月：[v2.0.0 Release](https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v2.0.0) · [旧版安装文档](docs/INSTALL-ZI-YUE-v2.md)。

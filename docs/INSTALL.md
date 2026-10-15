@@ -1,84 +1,58 @@
-# 紫月 v2 安装说明 · Installation Guide
+# 月璃 R4 安装说明
 
-## 1. 下载正确的文件
+## 下载
 
-打开：
+从仓库首页下载 `yue-li-r4-win-mac.zip`，解压整个文件夹。包内有 `pet/yue-li/pet.json`、`spritesheet.webp`、安装脚本和校验脚本。旧 `v2.0.0` Release 属于紫月。
 
-<https://github.com/Yifo98/zi-yue-codex-pet/releases/latest>
+## macOS
 
-在 **Assets** 下下载 `zi-yue-v2-win-mac.zip`。不要下载 GitHub 自动生成的 `Source code (zip)` 或 `Source code (tar.gz)`。
+在解压目录打开终端：
 
-Download `zi-yue-v2-win-mac.zip` from **Assets**. Do not download the auto-generated source archives.
+```bash
+/bin/bash ./install-yue-li-macos.sh
+/bin/bash ./verify-yue-li-macos.sh
+```
 
-## 2. Codex 如何读取宠物
+也可以运行对应的 `.command` 文件。无需 `sudo`。安装器只写入月璃目录，并在覆盖已有月璃文件前保存备份。
 
-Codex 不会从 ZIP 内直接加载宠物。安装后目录必须是：
+## Windows
+
+在解压目录打开 PowerShell：
+
+```powershell
+powershell -NoProfile -File .\install-yue-li-windows.ps1
+powershell -NoProfile -File .\verify-yue-li-windows.ps1
+```
+
+若系统策略不允许运行脚本，使用下方手动安装步骤，无需修改系统策略。
+
+## 目录与验证
+
+有 `CODEX_HOME` 时使用它；否则默认位置是：
 
 ```text
-${CODEX_HOME:-$HOME/.codex}/pets/zi-yue/
+macOS:   ~/.codex/pets/yue-li/
+Windows: %USERPROFILE%\.codex\pets\yue-li\
+
+yue-li/
 ├── pet.json
 └── spritesheet.webp
 ```
 
-安装后必须完全退出并重新打开 Codex/ChatGPT 桌面客户端。
+验证器应输出 `[PASS] Yue Li R4 is installed correctly`。随后完全退出并重开客户端，选择「月璃」，检查御剑、打字和捧莲动作。文件验证通过不等于在每个客户端版本上都完成了交互验证。
 
-## 3. Windows 自动安装
+安装器不会覆盖 `pets/zi-yue`，也不会调用账户 Pets API 或切换账户里的当前宠物。
 
-1. 完全退出客户端。
-2. 解压 `zi-yue-v2-win-mac.zip`。
-3. 在解压后的 `zi-yue-v2-win-mac` 目录打开 PowerShell。
-4. 运行：
+## 手动安装
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\install-zi-yue-windows.ps1"
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\verify-zi-yue-windows.ps1"
-```
+把完整的 `pet/yue-li` 文件夹复制到上述 `pets` 目录；不要多套一层。已有同名月璃时，先将旧目录保存在其他位置。再运行对应验证器，或把两个文件的 SHA256 与 `package-info.json` 中的 `payloadSha256` 比较。
 
-看到 `[PASS]` 后重新打开客户端。默认目录是 `%USERPROFILE%\.codex\pets\zi-yue`；如果设置了 `CODEX_HOME`，安装器会优先使用它。
+## 指定独立目录
 
-## 4. macOS 自动安装
+macOS 支持 `--codex-home /absolute/path`，Windows 支持 `-CodexHome C:\absolute\path`。这些参数只作用于本次脚本，不会改写全局配置。
 
-1. 完全退出客户端。
-2. 解压安装包。
-3. 在解压目录打开 Terminal。
-4. 运行：
+## 已验证的范围
 
-```bash
-/bin/bash "./install-zi-yue-macos.sh"
-/bin/bash "./verify-zi-yue-macos.sh"
-```
-
-也可以 Control-click `install-zi-yue.command` 后选择“打开”，随后运行 `verify-zi-yue.command`。
-
-如果 Gatekeeper 阻止双击 `.command`，使用上面的 `/bin/bash` 命令即可。不要关闭 Gatekeeper，不需要 `sudo`。
-
-## 5. 手动安装兜底
-
-将安装包内的 `pet/zi-yue` 文件夹复制到：
-
-```text
-$HOME/.codex/pets/zi-yue
-```
-
-若设置过 `CODEX_HOME`，则复制到 `$CODEX_HOME/pets/zi-yue`。确认该目录直接包含 `pet.json` 和 `spritesheet.webp`，不要再多套一层文件夹。
-
-## 6. 验证标准
-
-安装不是“脚本没报错”就算完成。验证脚本必须输出：
-
-```text
-[PASS] Zi Yue v2 is installed correctly
-```
-
-随后完全重启客户端，实际检查紫月的悬停回应、左右脚步和鼠标注视。
-
-## 7. 交给 GPT 安装
-
-把完整 ZIP 交给目标电脑上的 GPT，并让它读取包内 `INSTRUCTIONS-FOR-GPT.txt`。GPT 应当：
-
-1. 解压完整 ZIP；
-2. 判断 Windows 或 macOS；
-3. 执行对应安装器与验证器；
-4. 回报安装目录、两个 payload SHA256 和最终 `[PASS]`；
-5. 提醒用户完全重启客户端。
-
+- 图集通过 Pets 服务端预检，保存后回读的像素与验证稿一致。
+- macOS 安装与验证在隔离目录完成，包括已有文件的备份和损坏包拒绝写入。
+- Windows 脚本沿用原包的文件校验与复制流程，已核对清单和哈希；尚未在 Windows 设备上运行。
