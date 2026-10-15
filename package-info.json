@@ -9,12 +9,15 @@
     "macOS"
   ],
   "repository": "https://github.com/YIFO98/zi-yue-codex-pet",
-  "downloadUrl": "https://github.com/YIFO98/zi-yue-codex-pet/raw/refs/heads/main/packages/yue-li-r4-win-mac.zip",
+  "downloadUrl": "https://github.com/YIFO98/zi-yue-codex-pet/releases/download/v3.0.0/yue-li-r4-win-mac.zip",
   "installRoot": "${CODEX_HOME:-$HOME/.codex}/pets/yue-li",
   "sourcePngSha256": "bae5931ce6d48a9b82c2867db37f1c64c6e2c1d94a45fc31beff57d95cbd4b81",
   "payloadSha256": {
     "spritesheet.webp": "f5b41c2b07544ded1b63ac4867cf3d8143f84fb3e6f409ceeafdd3630f7cbb19",
     "pet.json": "a522b34b29a78516457b8bcc6675ed65912f99e76ec4a02298105d35422bcffe"
   },
-  "legacyRelease": "https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v2.0.0"
+  "legacyRelease": "https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v2.0.0",
+  "release": "v3.0.0",
+  "latestRelease": "https://github.com/YIFO98/zi-yue-codex-pet/releases/latest",
+  "releaseAssetSha256": "dfd276f29f7bd9712271e09663ae2a0fe94060c0d1268467a038699f0feff33f"
 }

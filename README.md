@@ -10,12 +10,14 @@ A moon-crowned companion with sword flight, a calm seated idle, headphone typing
 
 ## 下载与预览
 
-- **[下载月璃 R4 安装包（Windows / macOS）](https://github.com/YIFO98/zi-yue-codex-pet/raw/refs/heads/main/packages/yue-li-r4-win-mac.zip)**
+最新正式版本：[v3.0.0 · 月璃 R4](https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v3.0.0)。
+
+- **[下载月璃 R4 安装包（Windows / macOS）](https://github.com/YIFO98/zi-yue-codex-pet/releases/download/v3.0.0/yue-li-r4-win-mac.zip)**
 - [完整动作 GIF](preview/yue-li/yueli-all-states.gif) · [完整动作 MP4](preview/yue-li/yueli-all-states.mp4)
 - [交互预览源码](preview/yue-li/index.html)：下载仓库后用浏览器打开，可切换动作、逐帧查看及跟随指针。
 - [图集 WebP](pet/yue-li/spritesheet.webp) · [安装说明](docs/INSTALL.md)
 
-Download and extract the entire package, then run the installer for your OS. The current package is stored in this repository; the older GitHub Release `v2.0.0` contains Zi Yue, not Yue Li.
+Download `yue-li-r4-win-mac.zip` from the latest release, extract the entire package, then run the installer for your OS. Earlier Zi Yue releases remain available.
 
 ## 安装
 

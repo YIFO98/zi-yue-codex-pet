@@ -2,7 +2,7 @@
 
 ## 下载
 
-从仓库首页下载 `yue-li-r4-win-mac.zip`，解压整个文件夹。包内有 `pet/yue-li/pet.json`、`spritesheet.webp`、安装脚本和校验脚本。旧 `v2.0.0` Release 属于紫月。
+从 [v3.0.0 Release](https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v3.0.0) 的 **Assets** 下载 `yue-li-r4-win-mac.zip`，解压整个文件夹。包内有 `pet/yue-li/pet.json`、`spritesheet.webp`、安装脚本和校验脚本。旧 `v2.0.0` / `v2.1.0` Releases 属于紫月。
 
 ## macOS
 

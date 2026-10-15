@@ -21,4 +21,4 @@
 
 ## 兼容与历史
 
-仓库保留旧版紫月素材、安装器和 v2.0.0 Release。当前月璃安装包随主分支提供，未替换旧版 Release 的附件。
+月璃 R4 已发布为 [v3.0.0](https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v3.0.0)，安装包内容与主分支原 R4 包一致。旧版紫月素材、安装器及 v2.0.0 / v2.1.0 Releases 保留。
