@@ -7,8 +7,8 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $ExpectedHashes = @{
-    'pet.json'        = 'a522b34b29a78516457b8bcc6675ed65912f99e76ec4a02298105d35422bcffe'
-    'spritesheet.webp' = 'f5b41c2b07544ded1b63ac4867cf3d8143f84fb3e6f409ceeafdd3630f7cbb19'
+    'pet.json'        = '7d861a8ff747b3b8024704df48f59ab1ed81e1848fde7ccc1f12a124bfa2efdd'
+    'spritesheet.webp' = '695315d95d6fc8f4a5df2560b02cd93e07372c3904e7aaa97c55a1ca78014ff6'
 }
 
 if ([string]::IsNullOrWhiteSpace($CodexHome)) {
@@ -47,4 +47,4 @@ if ($Manifest.spritesheetPath -ne 'spritesheet.webp') {
     throw "Unexpected spritesheetPath: $($Manifest.spritesheetPath)"
 }
 
-Write-Host "[PASS] Yue Li R4 is installed correctly at: $TargetPetDir"
+Write-Host "[PASS] Yue Li R7 is installed correctly at: $TargetPetDir"

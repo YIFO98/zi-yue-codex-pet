@@ -1,4 +1,4 @@
-Install and verify the Yue Li R4 pet only when the user requests installation.
+Install and verify the Yue Li R7 pet only when the user requests installation.
 
 1. Extract the entire package and read docs/INSTALL.md.
 2. Detect the operating system and the existing CODEX_HOME setting.

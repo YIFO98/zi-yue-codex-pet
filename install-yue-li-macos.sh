@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-EXPECTED_MANIFEST_HASH="a522b34b29a78516457b8bcc6675ed65912f99e76ec4a02298105d35422bcffe"
-EXPECTED_SPRITE_HASH="f5b41c2b07544ded1b63ac4867cf3d8143f84fb3e6f409ceeafdd3630f7cbb19"
+EXPECTED_MANIFEST_HASH="7d861a8ff747b3b8024704df48f59ab1ed81e1848fde7ccc1f12a124bfa2efdd"
+EXPECTED_SPRITE_HASH="695315d95d6fc8f4a5df2560b02cd93e07372c3904e7aaa97c55a1ca78014ff6"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 SOURCE_PET_DIR="$SCRIPT_DIR/pet/yue-li"
@@ -74,5 +74,5 @@ fi
 assert_hash "$target_pet_dir/pet.json" "$EXPECTED_MANIFEST_HASH"
 assert_hash "$target_pet_dir/spritesheet.webp" "$EXPECTED_SPRITE_HASH"
 
-echo "[PASS] Yue Li R4 installed correctly at: $target_pet_dir"
+echo "[PASS] Yue Li R7 installed correctly at: $target_pet_dir"
 echo "[NEXT] Fully quit and reopen the Codex/ChatGPT desktop app."

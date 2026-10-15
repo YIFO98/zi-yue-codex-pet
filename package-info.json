@@ -1,6 +1,6 @@
 {
-  "packageName": "yue-li-r4-win-mac",
-  "revision": "r4",
+  "packageName": "yue-li-r7-win-mac",
+  "revision": "r7",
   "petId": "yue-li",
   "displayName": "月璃",
   "spriteVersionNumber": 2,
@@ -9,15 +9,15 @@
     "macOS"
   ],
   "repository": "https://github.com/YIFO98/zi-yue-codex-pet",
-  "downloadUrl": "https://github.com/YIFO98/zi-yue-codex-pet/releases/download/v3.0.0/yue-li-r4-win-mac.zip",
+  "downloadUrl": "https://github.com/YIFO98/zi-yue-codex-pet/releases/download/v3.0.1/yue-li-r7-win-mac.zip",
   "installRoot": "${CODEX_HOME:-$HOME/.codex}/pets/yue-li",
-  "sourcePngSha256": "bae5931ce6d48a9b82c2867db37f1c64c6e2c1d94a45fc31beff57d95cbd4b81",
+  "sourcePngSha256": "459caab081faf086c14ece8c01435587c039369830b52cfd7ccfc5f2f142405f",
   "payloadSha256": {
-    "spritesheet.webp": "f5b41c2b07544ded1b63ac4867cf3d8143f84fb3e6f409ceeafdd3630f7cbb19",
-    "pet.json": "a522b34b29a78516457b8bcc6675ed65912f99e76ec4a02298105d35422bcffe"
+    "pet.json": "7d861a8ff747b3b8024704df48f59ab1ed81e1848fde7ccc1f12a124bfa2efdd",
+    "spritesheet.webp": "695315d95d6fc8f4a5df2560b02cd93e07372c3904e7aaa97c55a1ca78014ff6"
   },
   "legacyRelease": "https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v2.0.0",
-  "release": "v3.0.0",
+  "release": "v3.0.1",
   "latestRelease": "https://github.com/YIFO98/zi-yue-codex-pet/releases/latest",
-  "releaseAssetSha256": "dfd276f29f7bd9712271e09663ae2a0fe94060c0d1268467a038699f0feff33f"
+  "releaseAssetSha256": "0d7b7e29d3790031f535268d4ee990f735d42795094f5dd70381f13c52b4642b"
 }

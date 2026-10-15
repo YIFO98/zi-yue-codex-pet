@@ -1,8 +1,8 @@
-# 月璃 R4 安装说明
+# 月璃 R7 安装说明
 
 ## 下载
 
-从 [v3.0.0 Release](https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v3.0.0) 的 **Assets** 下载 `yue-li-r4-win-mac.zip`，解压整个文件夹。包内有 `pet/yue-li/pet.json`、`spritesheet.webp`、安装脚本和校验脚本。旧 `v2.0.0` / `v2.1.0` Releases 属于紫月。
+从 [v3.0.1 Release](https://github.com/YIFO98/zi-yue-codex-pet/releases/tag/v3.0.1) 的 **Assets** 下载 `yue-li-r7-win-mac.zip`，解压整个文件夹。包内有 `pet/yue-li/pet.json`、`spritesheet.webp`、安装脚本和校验脚本。旧 `v2.0.0` / `v2.1.0` Releases 属于紫月。
 
 ## macOS
 
@@ -39,7 +39,7 @@ yue-li/
 └── spritesheet.webp
 ```
 
-验证器应输出 `[PASS] Yue Li R4 is installed correctly`。随后完全退出并重开客户端，选择「月璃」，检查御剑、打字和捧莲动作。文件验证通过不等于在每个客户端版本上都完成了交互验证。
+验证器应输出 `[PASS] Yue Li R7 is installed correctly`。随后完全退出并重开客户端，选择「月璃」，检查举星停留、御剑、打字和捧莲动作。文件验证通过不等于在每个客户端版本上都完成了交互验证。
 
 安装器不会覆盖 `pets/zi-yue`，也不会调用账户 Pets API 或切换账户里的当前宠物。
 
@@ -56,3 +56,7 @@ macOS 支持 `--codex-home /absolute/path`，Windows 支持 `-CodexHome C:\absol
 - 图集通过 Pets 服务端预检，保存后回读的像素与验证稿一致。
 - macOS 安装与验证在隔离目录完成，包括已有文件的备份和损坏包拒绝写入。
 - Windows 脚本沿用原包的文件校验与复制流程，已核对清单和哈希；尚未在 Windows 设备上运行。
+
+## 关于速度
+
+R7 延长了举星姿势在一轮中的停留占比，未修改客户端的实际播放倍率。预览页面的慢放按钮不会改变桌面宠物速度。

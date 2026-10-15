@@ -7,8 +7,8 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $ExpectedHashes = @{
-    'pet.json'        = 'a522b34b29a78516457b8bcc6675ed65912f99e76ec4a02298105d35422bcffe'
-    'spritesheet.webp' = 'f5b41c2b07544ded1b63ac4867cf3d8143f84fb3e6f409ceeafdd3630f7cbb19'
+    'pet.json'        = '7d861a8ff747b3b8024704df48f59ab1ed81e1848fde7ccc1f12a124bfa2efdd'
+    'spritesheet.webp' = '695315d95d6fc8f4a5df2560b02cd93e07372c3904e7aaa97c55a1ca78014ff6'
 }
 
 function Assert-FileHash {
@@ -49,7 +49,7 @@ $SourceManifest = Get-Content -LiteralPath (Join-Path $SourcePetDir 'pet.json') 
 if ($SourceManifest.id -ne 'yue-li' -or
     $SourceManifest.spriteVersionNumber -ne 2 -or
     $SourceManifest.spritesheetPath -ne 'spritesheet.webp') {
-    throw 'The packaged pet.json does not match the Yue Li R4 contract.'
+    throw 'The packaged pet.json does not match the Yue Li R7 contract.'
 }
 
 $ExistingFiles = @()
@@ -83,5 +83,5 @@ if ($InstalledManifest.id -ne 'yue-li' -or
     throw 'Installed pet.json failed validation.'
 }
 
-Write-Host "[OK] Yue Li R4 installed to: $TargetPetDir"
+Write-Host "[OK] Yue Li R7 installed to: $TargetPetDir"
 Write-Host '[NEXT] Fully quit and reopen the Codex/ChatGPT desktop app.'
